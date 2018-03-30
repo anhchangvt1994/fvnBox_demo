@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#main {  
+  background-attachment: scroll, scroll;  
+}
+#main.morningBg{
+  background: url("../images/dynamic_clouds01.png") left -30px top 0, url("../images/dynamic_clouds02.png") left -10px top 0;
+  background-color: #85ccf9;  
+  -webkit-transition: background-position 100s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  -moz-transition: background-position 100s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  -ms-transition: background-position 100s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  -o-transition: background-position 100s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  transition: background-position 100s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+}
+#main.afternoonBg {
+  background: url("../images/dynamic_clouds01.png") left -30px top 0, url("../images/dynamic_clouds02.png") left -10px top 0;
+  background-color: #f7980b;
+  -webkit-transition: background-position 200s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  -moz-transition: background-position 200s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  -ms-transition: background-position 200s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  -o-transition: background-position 200s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  transition: background-position 200s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+}
+#main.nightBg{
+  background: url("../images/dynamic_galaxy01.png") left -30px top 0, url("../images/dynamic_galaxy02.png") left -10px top 0;
+  -webkit-transition: background-position 130s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  -moz-transition: background-position 130s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  -ms-transition: background-position 130s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  -o-transition: background-position 130s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  transition: background-position 130s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 2s ease;
+  background-color: #000;
+}
+#main.nightBg #content:before{
+  display: none;
+}
+#content {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  padding: 80px 0 50px;
+  z-index: 0;
+}
+
+#content:before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  left: 0;
+  background: url("../images/bot_clouds.png") center top/cover no-repeat;
+  z-index: -1;
+}
+
+#wrapper {
+  min-width: 1000px;
+  overflow: hidden;
+}
+
+p {
+  margin: 0 0 5px 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h4 {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  padding: 10px 20px;
+  color: #fff;
+  /* background: #6C5B7B;   */
+  background-color: #355C7D;
+  border: 1px solid #fff;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-bottom: 40px;
+}
+
+header {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+header .h_inner {
+  display: inline-block;
+  padding: 10px 50px;
+  background: #C06C84;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #fff;
+  border-top: 0;
+}
+
+header .h_inner li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+header .h_inner li:last-child {
+  margin-right: 0;
+}
+
+header .h_inner a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #C06C84;
+  text-decoration: none;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  font-weight: bold;
+}
+
+header .h_inner .choosenTag {
+  background: #F8B195;
+  color: #fff;
+}
+
+header .logoTxt {
+  position: absolute;
+  left: 20px;
+  top: -20px;
+}
+
+header .logoTxt img {
+  max-width: 250px;
+  max-height: 150px;
+}
+
+[class^="box"] {
+  margin: 0 auto;
+  letter-spacing: -4px;
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  clear: both;
+  margin-bottom: 50px;
+}
+
+[class^="box"] li {
+  position: relative;
+  display: inline-block;
+  width: 320px;
+  height: 200px;
+  background: #dedede;
+  margin: 5px 1% 0 0;
+  list-style: none;
+  list-style-type: none;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+[class^="box"] li:nth-child(-n+3) {
+  margin-top: 0;
+}
+
+[class^="box"] li:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+[class^="box"] li img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.box07 {
+  margin: 40px auto 20px;
+}
+
+.image-l {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.postGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #355C7D;
+}
+
+.postGroup .postArt {
+  width: 48%;
+  border: 1px solid #C06C84;
+  margin-top: 20px;
+  background: #fff;
+}
+
+.postGroup .postImg:nth-child(-n+2) {
+  margin-top: 0;
+}
+
+.postArt dt,
+.postArt dd {
+  display: block;
+  margin: 0;
+}
+
+.postArt dt {
+  padding: 10px;
+  background: #C06C84;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.postArt dd {
+  padding: 10px;
+}
+
+.postArt .postImage {
+  position: relative;
+  margin-bottom: 10px;
+  height: 200px;
+  background: #dedede;
+  line-height: 0;
+}
+
+.postArt .postImage img {
+  position: absolute;
+  max-width: 90%;
+  max-height: 90%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.frame01 {
+  overflow: hidden;
+  margin: 0 auto 30px;
+  padding: 20px;
+  background-color: rgba(53, 92, 125, 0.3);
+  color: #fff;
+}

@@ -1,0 +1,635 @@
+.fvnBox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+}
+.fvnBox img {
+  -webkit-touch-callout: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  pointer-events: none;
+  max-width: none;
+  max-height: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10000;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.9s ease;
+  -moz-transition: 0.9s ease;
+  -ms-transition: 0.9s ease;
+  -o-transition: 0.9s ease;
+  transition: 0.9s ease;
+  opacity: 0;
+}
+.fvnBox .fvnBox_Width,
+.fvnBox .fvnBox_Height {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  -webkit-transition-property: opacity, width, height !important;
+  -moz-transition-property: opacity, width, height !important;
+  -ms-transition-property: opacity, width, height !important;
+  -o-transition-property: opacity, width, height !important;
+  transition-property: opacity, width, height !important;
+}
+.fvnBox .fvnBox_Width {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.fvnBox .fvnBox_Height {
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+}
+.fvnInforBox,
+.fvnNavBox_pc,
+.fvnBox_img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 9999;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.9s ease;
+  -moz-transition: 0.9s ease;
+  -ms-transition: 0.9s ease;
+  -o-transition: 0.9s ease;
+  transition: 0.9s ease;
+  -webkit-transition-property: left, opacity, width, height;
+  -moz-transition-property: left, opacity, width, height;
+  -ms-transition-property: left, opacity, width, height;
+  -o-transition-property: left, opacity, width, height;
+  transition-property: left, opacity, width, height;
+}
+.fvnBox_number,
+.fvnBox_caption {
+  -webkit-touch-callout: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  position: absolute;
+  top: calc(100% + 7px);
+  color: #fff;
+  font-size: 20px;
+}
+.fvnBox_caption {
+  max-width: 30%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  right: 0;
+}
+[class*="fvnNavBox"] > .fvnBox_close {
+  display: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 9999;
+}
+[class*="fvnNavBox"].fvnBox_show > .fvnBox_close {
+  display: block;
+}
+[class*="fvnNavBox"].fvnBox_show > .fvnBox_next,
+[class*="fvnNavBox"].fvnBox_show > .fvnBox_prev {
+  display: inline-block;
+}
+.fvnBox_close {
+  display: none;
+}
+.fvnBox_close:before,
+.fvnBox_close:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 5px;
+  height: 30px;
+  background: #fff;
+  margin: auto;
+}
+.fvnBox_close:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.fvnBox_close:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.fvnNavBox_pc {
+  letter-spacing: -4px;
+  z-index: 10001;
+}
+.fvnNavBox_pc > .fvnBox_close {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.fvnNavBox_pc > .fvnBox_x {
+  left: calc(100% - 80px);
+}
+.fvnNavBox_pc > .fvnBox_y {
+  left: calc(100% - 70px);
+}
+.fvnNavBox_pc > .fvnBox_prev,
+.fvnNavBox_pc > .fvnBox_next {
+  position: relative;
+  display: none;
+  width: 25%;
+  height: 100%;
+  cursor: pointer;
+}
+.fvnNavBox_pc > .fvnBox_prev:before,
+.fvnNavBox_pc > .fvnBox_next:before,
+.fvnNavBox_pc > .fvnBox_prev:after,
+.fvnNavBox_pc > .fvnBox_next:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: auto 0;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-transition-property: left, right, opacity;
+  -moz-transition-property: left, right, opacity;
+  -ms-transition-property: left, right, opacity;
+  -o-transition-property: left, right, opacity;
+  transition-property: left, right, opacity;
+}
+.fvnNavBox_pc > .fvnBox_next {
+  float: right;
+}
+.fvnNavBox_pc > .fvnBox_next:before,
+.fvnNavBox_pc > .fvnBox_next:after {
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  right: 50px;
+}
+.fvnNavBox_pc > .fvnBox_next:before {
+  border-color: #000;
+  border-width: 7px;
+  right: 49px;
+}
+.fvnNavBox_pc > .fvnBox_next:hover:before {
+  right: 24px;
+  opacity: 1;
+}
+.fvnNavBox_pc > .fvnBox_next:hover:after {
+  right: 25px;
+  opacity: 1;
+}
+.fvnNavBox_pc > .fvnBox_prev {
+  float: left;
+}
+.fvnNavBox_pc > .fvnBox_prev:before,
+.fvnNavBox_pc > .fvnBox_prev:after {
+  border-bottom: 5px solid #fff;
+  border-left: 5px solid #fff;
+  left: 50px;
+}
+.fvnNavBox_pc > .fvnBox_prev:before {
+  border-color: #000;
+  border-width: 7px;
+  left: 49px;
+}
+.fvnNavBox_pc > .fvnBox_prev:hover:before {
+  left: 24px;
+  opacity: 1;
+}
+.fvnNavBox_pc > .fvnBox_prev:hover:after {
+  left: 25px;
+  opacity: 1;
+}
+.fvnNavBox_arrowSP {
+  text-align: center;
+}
+.fvnNavBox_arrowSP > .fvnBox_close {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 100%;
+}
+.fvnNavBox_arrowSP > .fvnBox_next,
+.fvnNavBox_arrowSP > .fvnBox_prev {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.fvnNavBox_arrowSP > .fvnBox_next:before,
+.fvnNavBox_arrowSP > .fvnBox_prev:before {
+  display: none;
+}
+.fvnNavBox_arrowSP > .fvnBox_next:after,
+.fvnNavBox_arrowSP > .fvnBox_prev:after {
+  display: inline-block;
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  border-color: #000;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.fvnNavBox_arrowSP > .fvnBox_next {
+  right: -60px;
+}
+.fvnNavBox_arrowSP > .fvnBox_next:hover:after,
+.fvnNavBox_arrowSP > .fvnBox_next:after {
+  right: -25px;
+}
+.fvnNavBox_arrowSP > .fvnBox_prev {
+  left: -60px;
+}
+.fvnNavBox_arrowSP > .fvnBox_prev:hover:after,
+.fvnNavBox_arrowSP > .fvnBox_prev:after {
+  left: -25px;
+}
+.fvnNavBox_arrowPC {
+  z-index: 10001;
+}
+.fvnNavBox_arrowPC > .fvnBox_next,
+.fvnNavBox_arrowPC > .fvnBox_prev {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  margin: auto 0;
+}
+.fvnNavBox_arrowPC > .fvnBox_next:before,
+.fvnNavBox_arrowPC > .fvnBox_prev:before {
+  display: none;
+}
+.fvnNavBox_arrowPC > .fvnBox_next:after,
+.fvnNavBox_arrowPC > .fvnBox_prev:after {
+  width: 100%;
+  height: 100%;
+}
+.fvnNavBox_arrowPC > .fvnBox_next {
+  left: calc(100% + 5px);
+}
+.fvnNavBox_arrowPC > .fvnBox_next:after,
+.fvnNavBox_arrowPC > .fvnBox_next:hover:after {
+  opacity: 1;
+  left: 0;
+  right: 0;
+}
+.fvnNavBox_arrowPC > .fvnBox_prev {
+  right: calc(100% + 5px);
+}
+.fvnNavBox_arrowPC > .fvnBox_prev:after,
+.fvnNavBox_arrowPC > .fvnBox_prev:hover:after {
+  opacity: 1;
+  left: auto;
+  right: 3px;
+}
+.fvnNavBox_y {
+  z-index: 10001;
+}
+.fvnNavBox_y > .fvnBox_close {
+  top: auto;
+  bottom: 100%;
+  left: auto;
+  right: 70px;
+}
+.fvnNavBox_y > .fvnBox_next,
+.fvnNavBox_y > .fvnBox_prev {
+  width: 100px;
+}
+.fvnNavBox_y > .fvnBox_next:before,
+.fvnNavBox_y > .fvnBox_prev:before {
+  display: none;
+}
+.fvnNavBox_y > .fvnBox_next {
+  position: absolute;
+  right: 0;
+}
+.fvnNavBox_y > .fvnBox_next:hover:after,
+.fvnNavBox_y > .fvnBox_next:after {
+  position: absolute;
+  left: calc(100% + 10px);
+  opacity: 1;
+}
+.fvnNavBox_y > .fvnBox_prev {
+  position: absolute;
+  left: 0;
+}
+.fvnNavBox_y > .fvnBox_prev:hover:after,
+.fvnNavBox_y > .fvnBox_prev:after {
+  position: absolute;
+  left: auto;
+  right: calc(100% - 10px);
+  opacity: 1;
+}
+.fvnNavBox_touch > .fvnBox_close {
+  display: block;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+.fvnBox_img {
+  background: #fff;
+}
+.fvnBox_fast {
+  -webkit-transition: 0.8s ease !important;
+  -moz-transition: 0.8s ease !important;
+  -ms-transition: 0.8s ease !important;
+  -o-transition: 0.8s ease !important;
+  transition: 0.8s ease !important;
+}
+.fvnBox_none {
+  -webkit-transition: linear !important;
+  -moz-transition: linear !important;
+  -ms-transition: linear !important;
+  -o-transition: linear !important;
+  transition: linear !important;
+}
+.fvnBox_quick,
+.fvnBox_return {
+  -webkit-transition: 0.5s ease !important;
+  -moz-transition: 0.5s ease !important;
+  -ms-transition: 0.5s ease !important;
+  -o-transition: 0.5s ease !important;
+  transition: 0.5s ease !important;
+}
+.fvnBox_out {
+  opacity: 0 !important;
+  -webkit-transition: 1.2s ease !important;
+  -moz-transition: 1.2s ease !important;
+  -ms-transition: 1.2s ease !important;
+  -o-transition: 1.2s ease !important;
+  transition: 1.2s ease !important;
+}
+.fvnBox_appear {
+  opacity: 1 !important;
+  -webkit-transition: 1.5s ease;
+  -moz-transition: 1.5s ease;
+  -ms-transition: 1.5s ease;
+  -o-transition: 1.5s ease;
+  transition: 1.5s ease;
+}
+.fvnBox_disappear {
+  -webkit-transition: 0.7s ease !important;
+  -moz-transition: 0.7s ease !important;
+  -ms-transition: 0.7s ease !important;
+  -o-transition: 0.7s ease !important;
+  transition: 0.7s ease !important;
+}
+.fvnBox_hidden {
+  display: none !important;
+}
+.fvnScrollBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10000;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.fvnScrollBox_cnt {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.9s ease;
+  -moz-transition: 0.9s ease;
+  -ms-transition: 0.9s ease;
+  -o-transition: 0.9s ease;
+  transition: 0.9s ease;
+  overflow: hidden;
+}
+.fvnBox_showX:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+}
+.fvnBox_showX:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 20px;
+  border-radius: 8px;
+  background: #444;
+}
+.fvnBox_showY:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 30px;
+  height: 100%;
+  border-radius: 5px;
+}
+.fvnBox_showY:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 20px;
+  height: 100%;
+  border-radius: 8px;
+  background: #444;
+}
+.fvnBox_scroller {
+  position: absolute;
+  border-radius: 5px;
+  background: #b1b1b1;
+  -webkit-touch-callout: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 10000;
+}
+.fvnBox_preventScroll {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+@media screen and (max-width: 940px) and (max-aspect-ratio: 13/9) {
+  .fvnNavBox_pc > .fvnBox_close {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 100%;
+  }
+  .fvnNavBox_pc > .fvnBox_x {
+    left: auto;
+  }
+}
+@media screen and (max-width: 768px) and (max-aspect-ratio: 13/9) {
+  .fvnNavBox_arrowSP .fvnBox_next,
+  .fvnNavBox_arrowSP .fvnBox_prev {
+    width: 80px;
+    height: 80px;
+    float: none;
+    left: auto;
+    right: auto;
+    top: calc(100% + 80px);
+  }
+  .fvnNavBox_arrowSP .fvnBox_next:before,
+  .fvnNavBox_arrowSP .fvnBox_prev:before {
+    display: none;
+  }
+  .fvnNavBox_arrowSP .fvnBox_next:after,
+  .fvnNavBox_arrowSP .fvnBox_prev:after {
+    width: 20px;
+    height: 20px;
+  }
+  .fvnNavBox_arrowSP .fvnBox_next {
+    margin-left: 20px;
+  }
+  .fvnNavBox_arrowSP .fvnBox_next:after,
+  .fvnNavBox_arrowSP .fvnBox_next:hover:after {
+    right: 5px;
+  }
+  .fvnNavBox_arrowSP .fvnBox_prev {
+    margin-right: 20px;
+  }
+  .fvnNavBox_arrowSP .fvnBox_prev:after,
+  .fvnNavBox_arrowSP .fvnBox_prev:hover:after {
+    left: 5px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .fvnNavBox_arrowSP > .fvnBox_next,
+  .fvnNavBox_arrowSP > .fvnBox_prev {
+    width: 70px;
+    height: 70px;
+  }
+  .fvnNavBox_arrowSP > .fvnBox_next:before,
+  .fvnNavBox_arrowSP > .fvnBox_prev:before {
+    display: none;
+  }
+  .fvnNavBox_arrowSP > .fvnBox_next:after,
+  .fvnNavBox_arrowSP > .fvnBox_prev:after {
+    width: 10px;
+    height: 10px;
+  }
+  .fvnNavBox_arrowSP > .fvnBox_next {
+    right: -40px;
+  }
+  .fvnNavBox_arrowSP > .fvnBox_next:hover:after,
+  .fvnNavBox_arrowSP > .fvnBox_next:after {
+    right: -10px;
+  }
+  .fvnNavBox_arrowSP > .fvnBox_prev {
+    left: -40px;
+  }
+  .fvnNavBox_arrowSP > .fvnBox_prev:hover:after,
+  .fvnNavBox_arrowSP > .fvnBox_prev:after {
+    left: -10px;
+  }
+}
+@media screen and (max-width: 640px) and (max-aspect-ratio: 13/9) {
+  .fvnNavBox_arrowSP .fvnBox_next,
+  .fvnNavBox_arrowSP .fvnBox_prev {
+    width: 60px;
+    height: 60px;
+    top: calc(100% + 80px);
+    left: auto;
+    right: auto;
+  }
+  .fvnNavBox_arrowSP .fvnBox_next:before,
+  .fvnNavBox_arrowSP .fvnBox_prev:before {
+    display: none;
+  }
+  .fvnNavBox_arrowSP .fvnBox_next:after,
+  .fvnNavBox_arrowSP .fvnBox_prev:after {
+    width: 10px;
+    height: 10px;
+  }
+  .fvnNavBox_arrowSP .fvnBox_next {
+    margin-left: 20px;
+  }
+  .fvnNavBox_arrowSP .fvnBox_next:after,
+  .fvnNavBox_arrowSP .fvnBox_next:hover:after {
+    right: 5px;
+  }
+  .fvnNavBox_arrowSP .fvnBox_prev {
+    margin-right: 20px;
+  }
+  .fvnNavBox_arrowSP .fvnBox_prev:after,
+  .fvnNavBox_arrowSP .fvnBox_prev:hover:after {
+    left: 5px;
+  }
+}
