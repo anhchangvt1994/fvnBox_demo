@@ -42,6 +42,9 @@
         <li>
           <a href="#box07">7</a>
         </li>
+        <li>
+          <a href="#box07">8</a>
+        </li>
       </ul>
     </header>
     <div id="main">
@@ -230,6 +233,24 @@
             </dl>
           </div>
         </div>
+        <h4 id="box08-fvn">FvnBox and Slick</h4>
+        <ul class="slick box08">
+          <li>
+            <img src="images/image01-larger.jpg" alt="product02">
+          </li>
+          <li>
+            <img src="images/image02-larger.jpg" alt="product03">
+          </li>
+          <li>
+            <img src="images/image03-larger.jpg" alt="product04">
+          </li>
+          <li>
+            <img src="images/image04-larger.jpg" alt="product05">
+          </li>
+          <li>
+            <img src="images/image05-larger.jpg" alt="product06">
+          </li>
+        </ul>
       </div>
     </div>
     <footer></footer>
@@ -275,6 +296,10 @@
       caption: true,
       scroll: ".scroll"
     }).except(".none");
+    $(".box08").fvnBox({
+      number: true,
+      caption: true
+    }).slick({ autoplay: true, prevArrow: false, nextArrow: false });
   })
   </script>
   <script src="js/common.js"></script>

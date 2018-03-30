@@ -15,6 +15,9 @@
     text-align: center;
     margin: 0 0 10px 0;
   }
+  .section{
+    margin-bottom: 30px;
+  }
   header .h_inner {
     padding: 10px 20px;
   }
@@ -71,6 +74,12 @@
   }
   .frame01 {
     padding: 10px;
+  }
+  .slick{
+    width: 100%;
+  }
+  .slick li{
+    height: 200px;
   }
 }
 
