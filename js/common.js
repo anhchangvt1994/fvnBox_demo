@@ -6,6 +6,7 @@ $(function() {
       this.paralaxClouds();
       this.logoScroll();
       this.changeTime();
+      this.setTextCopy();
     },
     smoothAnchor: function() {
       function hashScroll(hash) {
@@ -118,13 +119,13 @@ $(function() {
       var currentdate = new Date();
 
       function checkHours() {
-        if(currentdate.getHours() >= 19){
+        if (currentdate.getHours() >= 19) {
           $("#main").removeClass("afternoonBg morningBg");
           $("#main").addClass("nightBg");
-        }else if (currentdate.getHours() >= 14) {
+        } else if (currentdate.getHours() >= 14) {
           $("#main").removeClass("nightBg morningBg");
           $("#main").addClass("afternoonBg");
-        }else{
+        } else {
           $("#main").removeClass("nightBg afternoonBg");
           $("#main").addClass("morningBg");
         }
@@ -133,6 +134,17 @@ $(function() {
       setInterval(function() {
         checkHours();
       }, 1000);
+    },
+    setTextCopy: function() {
+      document.addEventListener("copy", function(e) {
+        console.log($($(e.target).parent())[0].className);
+        if($($(e.target).parent())[0].className == "codeDemo") {
+          var txt = window.getSelection().toString();
+          var clipboard = e.clipboardData || window.clipboardData || e.originalEvent.clipboardData;          
+          clipboard.setData("text/plain",txt.replace(/\s/g, ''));
+          e.preventDefault();
+        }
+      })
     }
   };
   obj.init();
