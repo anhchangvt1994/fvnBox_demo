@@ -132,6 +132,7 @@ $(function() {
       }
       checkHours();
       setInterval(function() {
+        currentdate = new Date();
         checkHours();
       }, 1000);
     },
