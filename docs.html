@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=-100%, user-scalable=yes" />
+  <title>FvnBox Docs</title>
+  <link rel="stylesheet" href="css/fvnBox.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <header>
+        <span class="logoTxt">
+        <img src="images/fvnbox_txt.png" alt="fvnbox">        
+      </span>
+        <ul class="h_inner">
+          <li>
+            <a href="#box01">1</a>
+          </li>
+          <li>
+            <a href="#box02">2</a>
+          </li>
+          <li>
+            <a href="#box03">3</a>
+          </li>
+          <li>
+            <a href="#box04">4</a>
+          </li>
+          <li>
+            <a href="#box05">5</a>
+          </li>
+          <li>
+            <a href="#box06">6</a>
+          </li>
+          <li>
+            <a href="#box07">7</a>
+          </li>
+        </ul>
+      </header>
+    </header>
+    <div id="main" class="none_bg">
+      <div id="content">
+        <h3>FvnBox</h3>
+        <div class="section">
+          <p>FvnBox là plugin được xây dựng dựa trên ý tưởng từ những plugins tiền nhiệm (FancyBox,LightBox,...), vì vậy cách thức hoạt động trên lý thuyết là như nhau, nhưng có những lợi và nhược điểm hoàn toàn khác nhau.</p>
+        </div>
+        <div class="frame_group">
+          <div class="frame detective">
+            <p class="ttl01">Nhược điểm</p>
+            <p>Nhược điểm của FvnBox hiện tại so với những phiên bản plugins tiền nhiệm có thể tổng quát như sau :</p>
+            <ul class="list">
+              <li>Chưa đa dạng về chuyển động (hiện tại plugin chỉ có mặc định 1 loại animtion).</li>
+              <li>Chưa hỗ trợ về những tiện ích như (video, component tùy chỉnh. Hiện tại plugin chỉ hỗ trợ cho thẻ "img").</li>
+            </ul>
+          </div>
+          <div class="frame advantage">
+            <p class="ttl01">Ưu điểm</p>
+            <p>Tuy FvnBox có những nhược điểm như đã nêu trên, song bên cạnh đó vẫn có nhiều ưu điểm nổi bật so với các plugins tiền nhiệm :</p>
+            <ul class="list">
+              <li>Dễ dàng thiết lập khởi tạo plugin, tiết kiệm tối đa thời gian.</li>
+              <li>Hỗ trợ tốt responsive.</li>
+              <li>Hỗ trợ scroll images cho những hình ảnh có kích thước cao/dài hơn so với kích thước màn hình.</li>
+              <li>Tích hợp slick slider giúp cho việc khởi tạo plugin cùng với slick dễ dàng và chính xác hơn.</li>
+              <li>Ngoài ra còn có những hỗ trợ thông minh khác như : xác định images thuộc các cấp layer khác nhau trong cùng 1 component, nhiều component có thể dùng chung 1 class khởi chạy mà không lo bị đụng nhau.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <p class="ttl02">Danh sách thuộc tính</p>
+          <table class="attr_tbl full_tbl">
+            <tr>
+              <th class="w10">w,h</th>
+              <td class="w90">thuộc tính "w","h" thiết lập chiều dài và chiều cao tối đa của image so với màn hình thiết bị, mặc định sẽ là maximum : 90</td>
+            </tr>
+            <tr>
+              <th>number,caption</th>
+              <td>thuộc tính "number" dùng để hiển thị số lượng images trong 1 component khởi chạy plugin, bên cạnh đó "caption" dùng để hiển thị "alt" của "img" tag (có thể xem caption giúp hiển thị tiêu đề image)</td>
+            </tr>
+            <tr>
+              <th>suffixImg</th>
+              <td>"suffixImg" là một thuộc tính đặc biệt dùng để thay thế image hiện tại bởi một image khác có tên mở rộng như đã khai báo (có thể được dùng trong những trường hợp : thay thế hình ảnh bởi một hình khác, hoặc thay thế hình bởi một hình có kích thước lớn hơn)</td>
+            </tr>
+            <tr>
+              <th>scroll</th>
+              <td>đúng như tên gọi, "scroll" là thuộc tính hỗ trợ cho những hình ảnh có chiều dài/cao lớn hơn so với màn hình hiển thị có thể được gói gọn trong phạm vi màn hình dưới dạng scroll. Như vậy người dùng vẫn có thể xem được toàn bộ hình ảnh.</td>
+            </tr>
+            <tr>
+              <th>except()</th>
+              <td>"except()" không được sử dụng dưới dạng thuộc tính, nó được sử dụng như một function khi khởi chạy plugin, "except()" hỗ trợ giúp tách biệt những element/component được khai báo trong except(...).</td>
+            </tr>
+            <tr>
+              <th>slick()</th>
+              <td>"slick()" vốn là khai báo khởi tạo của "slick slider js", ở đây slick lần đầu được tích hợp vào "fvnBox plugin", với mục đích tự động xử lý bất đồng bộ giữa "slick" và "fvnBox" để cả 2 đều thực hiện tốt nhiệm vụ mà không gây ảnh hưởng lên nhau.</td>
+            </tr>
+          </table>
+        </div>
+        <h4 id="box01-fvn">Default</h4>
+        <div class="section">
+          <p>Default là dạng mặc định của "fvnBox", ở dạng này tất cả mọi thuộc tính trong "fvnBox" đều được thiết lập mặc định.</p>
+          <p class="ttl01">khai báo :</p>
+          <code class="codeDemo">
+            <span class="red_txt">$</span>
+            <span>(</span>
+            <span class="yellow_txt">".class"</span>
+            <span>).</span>
+            <span class="blue_txt">fvnBox</span>
+            <span>()</span>
+          </code>
+        </div>
+        <h4 id="box02-fvn">Suffix Image</h4>
+        <div class="section">
+          <p>Như đã nêu trên, định dạng Suffix Image sử dụng thuộc tính "suffixImg" để thiết lập tên mở rộng cho hình ảnh thay thế (có thể thay thế hình ảnh hoàn toàn khác hoặc hình ảnh có kích thước lớn hơn).</p>
+          <p>vd ta có một hình ảnh có tên "demo_img.jpg" và hình ảnh thay thế có kích thước lớn hơn khi sử dụng trong "fvnBox" là "demo_img-larger.jpg", vậy ta sẽ khai báo như sau :</p>
+          <code class="codeDemo">
+            <span class="red_txt">$</span>
+            <span>(</span>
+            <span class="yellow_txt">".class"</span>
+            <span>).</span>
+            <span class="blue_txt">fvnBox</span>
+            <span>({suffixImg:</span>
+            <span class="yellow_txt">"larger"</span>
+            <span>})</span>
+          </code>
+        </div>
+        <h4 id="box03-fvn">Size Limit</h4>
+        <div class="section">
+          <p>Size Limit được sử dụng để định nghĩa giới hạn kích thước dài/cao của hình ảnh so với kích thước của thiết bị hiển thị. Mặc định sẽ là (w:90,h:90).</p>
+          <p>vd ta muốn giới hạn kích thước hình ảnh dài = 50% màn hình, cao = 60% màn hình thì ta thiết lập như sau :</p>
+          <code class="codeDemo">
+            <span class="red_txt">$</span>
+            <span>(</span>
+            <span class="yellow_txt">".class"</span>
+            <span>).</span>
+            <span class="blue_txt">fvnBox</span>
+            <span>({w:</span>
+            <span class="purple_txt">50</span>
+            <span>,h:</span>
+            <span class="purple_txt">60</span>
+            <span>})</span>
+          </code>
+        </div>
+        <h4 id="box04-fvn">Number and Caption</h4>
+        <div class="section">
+          <p>Chúng ta đôi khi cần hiển thị số lượng cũng như là tiêu đề ngắn dành cho hình ảnh, Number and Caption sẽ hỗ trợ chúng ta làm điều đó. "number" sẽ giúp chúng ta hiển thị số lượng hình ảnh trên tổng số hình ảnh có trong 1 component, "caption" sẽ giúp chúng ta hiển thị tiêu đề ngắn của hình ảnh dựa vào "alt" của "img" tag.</p>
+          <p>để khai báo number,caption cho hình ảnh, ta thiết lập như sau :</p>
+          <code class="codeDemo">
+            <span class="red_txt">$</span>
+            <span>(</span>
+            <span class="yellow_txt">".class"</span>
+            <span>).</span>
+            <span class="blue_txt">fvnBox</span>
+            <span>({number:</span>
+            <span class="yellow_txt">true</span>
+            <span>,caption:</span>
+            <span class="yellow_txt">true</span>
+            <span>})</span>
+          </code>
+        </div>
+        <h4 id="box05-fvn">Except Image</h4>
+        <div class="section">
+          <p>Except Image "except()" là một function được sử dụng trong "fvnBox" nhằm để chặn popup đối với những hình ảnh đặc biệt (hình ảnh anchorlink, hình ảnh không cần show popup, hình ảnh link đến trang khác ...), "except()" sẽ ngăn chặn popup của những hình ảnh này trong phạm vi chịu ảnh hưởng popup. class được chỉ định trong "except(...)" có tính chất lan truyền (nghĩa là chúng ta không cần phải đặt except class cho từng img tag mà ta muốn tách biệt, mà chúng ta chỉ cần đặt except class cho 1 component chứa những img tách biệt đó).</p>
+          <p>khai báo Except Image chúng ta sẽ thiết lập fvnBox như sau :</p>
+          <code class="codeDemo">
+            <span class="red_txt">$</span>
+            <span>(</span>
+            <span class="yellow_txt">".class"</span>
+            <span>).</span>
+            <span class="blue_txt">fvnBox</span>
+            <span>().</span>
+            <span class="blue_txt">except</span>
+            <span>(</span>
+            <span class="yellow_txt">".except"</span>
+            <span>)</span>
+          </code>
+        </div>
+        <h4 id="box06-fvn">Scroll Image</h4>
+        <div class="section">
+          <p>Có những hình ảnh với kích thước dài/cao lớn hơn hẳn kích thước dài/cao của màn hình hiển thị, vậy nên để hiển thị hình ảnh tốt nhất có thể thì chúng ta cần chức năng "Scroll Image", giúp cho hình ảnh hiển thị đúng kích thước cần thiết dưới dạng scroll, cho phép người dùng xem được toàn bộ hình ảnh với kích thước và độ phân giải tốt nhất. Class của scroll cũng có tính chất lan truyền, nghĩa là ta có thể sử dụng Scroll Class trong một phạm vi component chứ không chỉ phạm vi trên mỗi một tag "img".</p>
+          <p>vd chúng ta có một hình ảnh scroll và chúng ta muốn nó được hiển thị với kích thước có scroll (1.đặt một class bất kì cho hình ảnh, 2. khai báo class đó trong thuộc tính scroll của fvnBox).</p>
+          <code class="codeDemo">
+            <span class="red_txt">$</span>
+            <span>(</span>
+            <span class="yellow_txt">".class"</span>
+            <span>).</span>
+            <span class="blue_txt">fvnBox</span>
+            <span>({scroll:</span>
+            <span class="yellow_txt">".scroll"</span>
+            <span>})</span>
+          </code>
+        </div>
+        <h4 id="box07-fvn">FvnBox and Slick</h4>
+        <div class="section">
+          <p>Đây là một tính năng tích hợp ngoài lề, được sử dụng trong trường hợp chúng ta muốn sử dụng "FvnBox" cùng với "Slick", nhằm mục đích tự thiết lập tiến trình bất đồng bộ của 2 plugins sao cho đồng bộ nhất, để 2 plugins có thể thực hiện nhiệm vụ riêng của mình mà không bị ảnh hưởng lẫn nhau.</p>
+          <p>Để khởi chạy slick được tích hợp trong "fvnBox" chúng ta cần đến file "slick js, slick css" và thực hiện khai báo khởi chạy như sau :</p>
+          <code class="codeDemo">
+            <span class="red_txt">$</span>
+            <span>(</span>
+            <span class="yellow_txt">".class"</span>
+            <span>).</span>
+            <span class="blue_txt">fvnBox</span>
+            <span>().</span>
+            <span class="blue_txt">slick</span>
+            <span>(</span>
+            <span class="yellow_txt">...</span>
+            <span>)</span>
+          </code>
+        </div>
+        <h4>Others</h4>
+        <div class="section">
+          <p>Ngoài những tính năng nêu trên, "fvnBox" còn hỗ trợ những thiết lập tự động giúp đơn giản việc code và tối giản thời gian code cho người dùng.</p>
+          <ul class="list">
+            <li>Chúng ta không cần phải vừa khai báo một đường dẫn cho "img" và một đường dẫn cho một tag "a" chẳng hạn, để plugin có thể hiểu và hiển thị hình ảnh đó.</li>
+            <li>Chúng ta không cần phải đặt lại tên class hay "rel" cho các component nếu trong 1 site có từ 2~ component có sử dụng fvnBox, chỉ cần 1 class cho tất cả component (dĩ nhiên là nếu chúng có chung thiết lập w,h còn lại các thiết lập khác chúng ta có thể thiết lập dư cho chúng).</li>
+            <li>Chúng ta không cần phải lo lắng về tính "responsive" của fvnBox trên từng màn hình.</li>
+            <li>Chúng ta không cần phải thiết lập cấu trúc code HTML sao cho các hình ảnh trong cùng "fvnBox" có thể được hiểu và hiển thị cùng nhau, "multiple layers" cho phép "fvnBox" phân tích và tổng hợp hình ảnh được đặt ở bất kì cấp nào trong component, để tổng hợp lại tạo thành một list images hoàn chỉnh như mong muốn.</li>
+          </ul>
+        </div>
+      </div>
+      <ul class="options_box">
+        <li>
+          <a href="index.html">Demo</a>
+        </li>
+        <li class="active">
+          <a href="docs.html">Docs</a>
+        </li>
+      </ul>
+    </div>
+    <footer></footer>
+  </div>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

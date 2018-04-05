@@ -10,6 +10,9 @@
     height: 100px;   
     z-index: 5;
   }
+  #main.none_bg #content{
+    padding: 150px 20px 80px;
+  }
   .image-l {
     float: none;
     text-align: center;
@@ -46,6 +49,7 @@
     max-width: 100%;
     max-height: none;
   }
+  h3{display: none;}
   h4 {
     margin-bottom: 30px;
   }
@@ -81,8 +85,52 @@
   .slick li{
     height: 200px;
   }
-}
+  .frame{
+    width: 100%;
+    padding: 20px;    
+  }
+  .frame.detective{
+    margin-bottom: 20px;
+  }
+  .frame.advantage{border:none;}
+  code{width: 100%;}
+  .options_box{
+    width: 100%;
+    right: auto;left: 0;
+    top: auto;bottom: 0;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  .options_box li{
+    width: 50%;
+  }
+  .options_box a{
+    min-width: none;
+    width: 100%;
+  }
+  .options_box .active a{padding: 15px 0 14px;}
 
+}
+@media only screen and (max-width: 480px){
+  .full_tbl td,.full_tbl th{
+    display: block;
+    width: 100%;
+    border: none;    
+  }  
+  .full_tbl th{
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+  }
+  .full_tbl tr:last-child th {
+    border-bottom: 1px solid #fff;
+  }
+  .full_tbl tr:last-child td{
+    border-bottom: 1px solid #fff;
+  }
+}
 @media only screen and (max-width: 425px) {
   header .h_inner {
     width: 100%;
