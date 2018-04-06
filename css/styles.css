@@ -70,7 +70,9 @@
   background: url("../images/bot_clouds.png") center top/cover no-repeat;
   z-index: -1;
 }
-
+#main.none_bg #content:before{
+  display: none;
+}
 #wrapper {
   min-width: 1000px;
   overflow: hidden;
